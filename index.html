@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo List</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+</head>
+<body>
+	<header>
+		<h1>ToDo List</h1>
+	</header>
+	<main>
+		<form action="" class="add">
+			<input type="text" id="addtarefa">
+			<button class="btn btnadd" onclick="addTask()">+</button>
+		</form>
+		<section class="tarefas" id="tarefas">
+			<div class="tarefa">
+				<input type="checkbox" id="check">
+				<input type="text" id="tarefatexto" placeholder="Comprar leite">
+				<button class="btn">
+					<img src="img/lixo.png">
+				</button>
+			</div>
+		</section>
+	</main>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

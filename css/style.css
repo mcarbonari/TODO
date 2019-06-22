@@ -1,0 +1,81 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--verde: #8dc63f;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #e6e6e6;
+}
+
+header{
+	background-color: var(--verde);
+	color: white;
+	text-transform: uppercase;
+	height: 72px;
+	display: flex;
+	align-items: center;
+}
+
+header h1{
+	margin-left: 1rem;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+#tarefatexto, #addtarefa{
+	border-style: none;
+	border-radius: 5px;
+	height: 56px;
+	outline: none;
+	border: solid .8px var(--verde);
+}
+
+#check{
+	height: 56px;
+	width: 60px;
+	margin-right: 0.5rem;
+}
+
+#addtarefa{
+	width: 220px;
+}
+
+.btn{
+	border-style: none;
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+	height: 56px;
+	width: 60px;
+	background-color: var(--verde);
+	color: white;
+	margin-left: 0.5rem;
+	/*outline: none;*/
+}
+
+.btn img{
+	height: 25px;
+}
+.btnadd{
+	font-size: 30px;
+}
+
+.tarefas{
+	display: flex;
+	flex-direction: column;
+}
+
+.tarefa{
+	display: flex;
+	margin-top: 1rem;
+}

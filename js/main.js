@@ -13,7 +13,44 @@ function addTask() {
   sequence++;
   tasks.push(task);
   draw();
+  var user = new Tarefa(task);
+  var bd = new Banco();
+  bd.inserir(user);
 }
+
+class Banco{
+  constructor(){
+    this.dados;
+    if(localStorage.length == 0){
+      this.dados = [];
+    } else{
+      this.dados = JSON.parse(localStorage.getItem('tabela'));
+    }
+  }
+  inserir(tudo) {
+    this.dados = JSON.parse(localStorage.getItem('tabela'));
+    this.dados = [];
+    this.dados.push(tudo);
+    localStorage.setItem('tabela', JSON.stringify(this.dados));
+  }
+
+  buscar(email, senha){
+    this.dados = JSON.parse(localStorage.getItem('tabela'));
+    for(var i=0; i < this.dados.length; i++){
+      if(this.dados[i].email == email && this.dados[i].senha == senha){
+        return this.dados[i];
+      }
+    }
+    return false;
+  }
+}
+
+class Tarefa{
+  constructor(task){
+    this.task = task;
+  }
+}
+
 
 function draw() {
   document.getElementById('tasks').innerHTML = '';
